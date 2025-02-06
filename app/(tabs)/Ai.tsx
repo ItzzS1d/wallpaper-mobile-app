@@ -27,8 +27,7 @@ const Ai = () => {
   const [downloading, setIsDownloading] = useState(false);
 
   const client = new OpenAi({
-    apiKey:
-      "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",
+    apiKey: process.env.EXPO_API_KEY,
   });
   const handleGenerateImg = async () => {
     if (!prompt) return Alert.alert("failed", "Prompt is required");
